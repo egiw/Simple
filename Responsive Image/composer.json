@@ -2,6 +2,6 @@
     "require": {
         "slim/slim": "2.*",
         "respect/validation": "dev-develop",
-        "doctrine/orm": "2.3.4"
+        "doctrine/orm": "2.4.*"
     }
 }
