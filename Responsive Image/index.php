@@ -5,7 +5,6 @@ use Respect\Validation\Validator as Validator;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-require './vendor/autoload.php';
 require './bootstrap.php';
 
 // instantiate a Slim application
