@@ -22,7 +22,6 @@ foreach ($bugs as $bug) {
     foreach ($bug->getProducts() as $product) {
         echo "  Platform: {$product->getName()}.\n";
     }
-    Debug::dump($bug->getReporter()->test());
     echo "\n";
     
 }

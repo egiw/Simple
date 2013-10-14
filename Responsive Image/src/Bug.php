@@ -33,7 +33,8 @@ class Bug {
 
     /**
      *
-     * @ManyToMany(targetEntity="Product")
+     * @ManyToMany(targetEntity="Product", inversedBy="bugs")
+     * @var Product[]
      */
     protected $products;
 
@@ -112,11 +113,20 @@ class Bug {
     }
 
     /**
-     * 
+     * Get products assigned by this bug
      * @return Product[]
      */
     public function getProducts() {
         return $this->products;
     }
+    
+    /**
+     * close the bug
+     * @return void
+     */
+    public function close() {
+        $this->status = "CLOSE";
+    }
+    
 
 }

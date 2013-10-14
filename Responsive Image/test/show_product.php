@@ -2,7 +2,7 @@
 
 /* @var $entityManager \Doctrine\ORM\EntityManager */
 
-require './bootstrap.php';
+require '../bootstrap.php';
 
 $id = $argv[1];
 /* @var $product Product */
@@ -14,3 +14,6 @@ if (null === $product) {
 }
 
 echo sprintf("%s\n", $product->getName());
+foreach ($product->getBugs() as $bug) {
+    echo $bug->getDescription() . ".\n";
+}

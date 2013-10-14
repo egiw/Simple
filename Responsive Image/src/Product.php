@@ -20,6 +20,12 @@ class Product {
      */
     protected $name;
 
+    /**
+     * @ManyToMany(targetEntity="Bug", mappedBy="products")
+     * @var Bug[]
+     */
+    protected $bugs;
+
     public function getId() {
         return $this->id;
     }
@@ -32,4 +38,11 @@ class Product {
         $this->name = $name;
     }
 
+    /**
+     * Get the bugs of the product
+     * @return Bug[]
+     */
+    public function getBugs() {
+        return $this->bugs;
+    }
 }
