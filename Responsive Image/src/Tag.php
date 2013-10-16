@@ -20,7 +20,7 @@ class Tag {
     protected $name;
     
     /**
-     * @ManyToMany(targetEntity="Article", mappedBy="tags", cascade={"persist","merge"})
+     * @ManyToMany(targetEntity="Article", mappedBy="tags", cascade={"detach"})
      * @var Article[]
      */
     protected $articles;

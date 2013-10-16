@@ -32,10 +32,11 @@ class Article {
     protected $created;
 
     /**
-     * @ManyToMany(targetEntity="Tag", inversedBy="articles", cascade={"persist","merge"})
+     * @ManyToMany(targetEntity="Tag", inversedBy="articles", cascade={"detach"})
      * @var Tag[]
      */
     protected $tags;
+    
 
     public function getId() {
         return $this->id;
@@ -72,7 +73,7 @@ class Article {
     
     /**
      * 
-     * @return Tag[]
+     * @return \Doctrine\Common\Collections\ArrayCollection
      */
     public function getTags() {
         return $this->tags;
